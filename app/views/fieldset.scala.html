@@ -1,0 +1,51 @@
+@(searchCriteriaForm: Form[views.formdata.ContractSearchCriteriaFormData],
+contractEntityList:   Map[String,String],
+contractCategoryList: Map[String,String])
+
+@import views.html.mmscustomhelper._
+
+<fieldset class="form-group">
+    <div class="row">
+        @select(searchCriteriaForm("contractEntity"),
+        label = "Contract Entity",
+        optionMap = contractEntityList,
+        isMultiple = false,
+        help = "")
+
+        @text(searchCriteriaForm("contractID"),
+        label = "Contract ID",
+        placeholder = "",
+        help = "")
+
+        @text(searchCriteriaForm("version"),
+        label = "Version",
+        placeholder = "",
+        help = "")
+    </div>
+</fieldset>
+<fieldset class="form-group">
+    <div class="row">
+        @text(searchCriteriaForm("contractName"),
+        label = "Contract Name",
+        placeholder = "",
+        help = "")
+
+        @text(searchCriteriaForm("contractType"),
+        label = "Contract Type",
+        placeholder = "",
+        help = "")
+
+        @select(searchCriteriaForm("category"),
+        label = "Contract Category",
+        optionMap = contractCategoryList,
+        isMultiple = false,
+        help = "")
+    </div>
+</fieldset>
+<fieldset class="form-group">
+    <div class="row">
+        <div class="col-xs-3 col-md-6">
+            <input class="btn btn-primary" type="submit" value="Search">
+        </div>
+    </div>
+</fieldset>

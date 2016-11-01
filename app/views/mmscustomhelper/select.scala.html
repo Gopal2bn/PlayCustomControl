@@ -1,0 +1,19 @@
+@(field: Field, label: String = "CHANGEME", optionMap: Map[String, String], isMultiple: Boolean, help: String = "")
+
+  <div class="col-xs-1 col-md-2 text-md-right">
+    <label class="form-label" for="@field.id">@label</label>
+    </div>
+    <div class="col-xs-2">
+      <select
+        class="form-control"
+        id="@field.id"
+        name="@if(isMultiple) {@(field.name + "[]")} else {@field.name}"
+        @if(isMultiple) {multiple="multiple"}>
+        @if(!isMultiple) {<option class="blank" value=""></option>}
+        @for(ce <- optionMap) {
+        <option value="@ce._1">@ce._2</option>
+        }
+      </select>
+      <span class="help-block">@help</span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+    </div>

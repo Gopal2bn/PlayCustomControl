@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Apollo CSS -->
+    <link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0-beta.4/apollo.min.css" crossorigin="anonymous">
+
+    <!-- jQuery first, then Apollo JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//cdn.ims.io/design/js/1.0.0-beta.4/apollo.min.js" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+<nav class="navbar navbar-primary navbar-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+            <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27">
+                <polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/>
+                <polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/>
+            </svg>
+            Project Eagle
+        </a>
+        <ul class="navbar-links">
+            <li class="navbar-item dropdown">
+                <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">Contracts</a>
+                <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+                    <li><a href="contractsearch.html">Contract Manager</a></li>
+                    <li><a href="#0">Contract Entities</a></li>
+                </ul>
+            <li class="navbar-item">
+                <a href="prodsearch.html">Products</a>
+            </li>
+            <li class="navbar-item">
+                <a href="pharmacies.html">Pharmacies</a>
+            </li>
+            <li class="navbar-item dropdown">
+                <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">Clients</a>
+                <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+                    <li><a href="#0">Client Tracker</a></li>
+                    <li><a href="clientskel.html">Client Skeleton</a></li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#0">Formulary</a>
+            </li>
+            </li>
+            <li class="navbar-item">
+                <a href="#0">Duplication</a>
+            </li>
+            <div class="navbar-profile">
+                <span class="profile-username">Carson Oren</span>
+                <div class="profile-credential dropdown">
+                    <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">coren@us.imshealth.com</a>
+                    <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
+                        <li><a href="login.html">Log out</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#0">Switch credentials</a></li>
+                        <li><a href="#0">Change Customer</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#0">Account settings</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </ul>
+    </div>
+</nav>
+<div class="card card-accordion" role="tablist" aria-multiselectable="true">
+    <div class="card-header" id="accordion-head-1" role="tab">
+        <h3 class="card-title" data-toggle="collapse" data-target="#accordion-sect-1" aria-expanded="true"
+            aria-controls="accordion-sect-1">Hide/Show</h3>
+        </h3>
+    </div>
+    <div class="card-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+    </div>
+    <form>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-xs-1 col-md-2 text-md-right">
+                    <label class="form-label" for="select-position">Contract Entity</label>
+                </div>
+                <div class="col-xs-2">
+                    <select class="form-control" name="select-position">
+                        <option>Caremark MCO</option>
+                        <option>Express Scripts MCO</option>
+                        <option>Cigna MMA</option>
+                    </select>
+                </div>
+                <div class="col-xs-1 col-md-1 text-md-right">
+                    <label class="control-label" for="full-name">Contract ID</label>
+                </div>
+                <div class="col-xs-2">
+                    <input class="form-control" id="full-name" type="text" name="full-name"/>
+                </div>
+                <div class="col-xs-1 col-md-1 text-md-right">
+                    <label class="control-label" for="full-name">Version</label>
+                </div>
+                <div class="col-xs-2">
+                    <input class="form-control" id="full-name" type="text" name="full-name"/>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-xs-1 col-md-2 text-md-right">
+                    <label class="control-label" for="full-name">Contract Name</label>
+                </div>
+                <div class="col-xs-2">
+                    <input class="form-control" id="full-name" type="text" name="full-name"/>
+                </div>
+                <div class="col-xs-1 col-md-1 text-md-right">
+                    <label class="control-label" for="full-name">Contract Type</label>
+                </div>
+                <div class="col-xs-2">
+                    <input class="form-control" id="full-name" type="text" name="full-name"/>
+                </div>
+                <div class="col-xs-1 col-md-1 text-md-right">
+                    <label class="form-label" for="select-position">Contract Category</label>
+                </div>
+                <div class="col-xs-2">
+                    <select class="form-control" name="select-position">
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Sample</option>
+                        <option>Hidden</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-xs-3 col-md-6">
+                    <a class="btn btn-primary" type="submit" href="contracts.html">Search</a>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-xs-3 col-md-6">
+                    <a class="btn btn-link" type="submit" href="#0">Create New Contract</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+
+<nav class="pager">
+    <a class="pager-prev">Previous</a>
+    <div class="pager-count">
+        Page 1 of 1
+    </div>
+    <a class="pager-next">Next</a>
+</nav>
+<table class="table table-sm">
+    <thead>
+    <tr>
+        <th>Contract Entity</th>
+        <th>Contract Name</th>
+        <th>Contract ID</th>
+        <th>Version</th>
+        <th>Category</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Caremark MCO</td>
+        <td>CVS Caremark MCO 2015</td>
+        <td>
+            <button class="btn btn-link" type="submit" href="#0">CARMK2015</button>
+        </td>
+        <td>1</td>
+        <td>Active</td>
+        <td>1/1/2015</td>
+        <td>7/31/2015</td>
+        <td>
+            <button class="btn btn-link"><span class="icon icon-edit"></span></button>
+            <button class="btn btn-link"><span class="icon icon-trash"></span></button>
+        </td>
+    </tr>
+    <tr>
+        <td>Caremark MCO</td>
+        <td>CVS Caremark MCO 2015</td>
+        <td>
+            <button class="btn btn-link" type="submit" href="#0">CARMK2015</button>
+        </td>
+        <td>2</td>
+        <td>Active</td>
+        <td>8/1/2015</td>
+        <td>12/31/2015</td>
+        <td>
+            <button class="btn btn-link"><span class="icon icon-edit"></span></button>
+            <button class="btn btn-link"><span class="icon icon-trash"></span></button>
+        </td>
+    </tr>
+    <tr>
+        <td>Caremark MCO</td>
+        <td>Caremark 2016 MCO</td>
+        <td>
+            <button class="btn btn-link" type="submit" href="#0">CARMK2016</button>
+        </td>
+        <td>1</td>
+        <td>Active</td>
+        <td>1/1/2016</td>
+        <td>12/31/2016</td>
+        <td>
+            <button class="btn btn-link"><span class="icon icon-edit"></span></button>
+            <button class="btn btn-link"><span class="icon icon-trash"></span></button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

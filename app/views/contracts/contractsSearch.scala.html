@@ -1,0 +1,16 @@
+@(searchCriteriaForm: Form[views.formdata.ContractSearchCriteriaFormData],contractEntityList: Map[String,String],contractCategoryList: Map[String,String])(implicit messages: Messages)
+@import helper._
+@main("Welcome to Play") {
+
+<div class="accordion" role="tablist" aria-multiselectable="true">
+    <div class="accordion-header" id="accordion-head-1" role="tab" data-toggle="collapse"
+         data-target="#accordion-sect-1" aria-expanded="true" aria-controls="accordion-sect-1">
+        <h3 class="accordion-title">Hide/Show</h3>
+    </div>
+    <div class="accordion-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+        @form(routes.ContractsController.search1()) {
+            @fieldset(searchCriteriaForm, contractEntityList,contractCategoryList)
+        }
+    </div>
+</div>
+}

@@ -1,0 +1,15 @@
+@(field: Field, label: String = "CHANGEME", placeholder: String = "", help: String = "")
+    <div class="col-xs-1 col-md-1 text-md-right">
+      <label class="control-label" for="@field.id">@label</label>
+    </div>
+    <div class="col-xs-2">
+      <input type="text" 
+             class="form-control" 
+             id="@field.id" 
+             name="@field.name" 
+             value='@field.value.getOrElse("")'
+             placeholder="@placeholder" />
+      <span class="help-block">@help</span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+    </div>
+

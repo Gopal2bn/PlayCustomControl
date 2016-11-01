@@ -1,0 +1,89 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href='@routes.Assets.versioned("images/favicon.png")'/>
+        <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/main.css")'/>
+        <script src='@routes.Assets.versioned("javascripts/hello.js")' type="text/javascript"></script>
+        <link rel="stylesheet" href='http://cdn.ims.io/design/css/1.0.0-beta.2/apollo.min.css'>
+    </head>
+    <body>
+    <nav class="navbar navbar-primary navbar-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27">
+                    <polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/>
+                    <polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/>
+                </svg>
+                Project Eagle
+            </a>
+            <ul class="navbar-links">
+                <li class="navbar-item dropdown">
+                    <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Contracts</a>
+                    <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+                        <li><a href="contractsearch.html">Contract Manager</a></li>
+                        <li><a href="#0">Contract Entities</a></li>
+                    </ul>
+                <li class="navbar-item">
+                    <a href="prodsearch.html">Products</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="pharmacies.html">Pharmacies</a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Clients</a>
+                    <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+                        <li><a href="#0">Client Tracker</a></li>
+                        <li><a href="clientskel.html">Client Skeleton</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="#0">Formulary</a>
+                </li>
+                </li>
+                <li class="navbar-item">
+                    <a href="#0">Duplication</a>
+                </li>
+                <div class="navbar-profile">
+                    <span class="profile-username">Carson Oren</span>
+                    <div class="profile-credential dropdown">
+                        <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false" ></a>
+                        <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
+                            <li><a href="login.html">Log out</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#0">Switch credentials</a></li>
+                            <li><a href="#0">Change Customer</a></li>
+                            <li class="separator"></li>
+                            <li><a href="#0">Account settings</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </ul>
+        </div>
+    </nav>
+        @* And here's where we render the `Html` object containing
+         * the page content. *@
+        @content
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="http://cdn.ims.io/design/js/1.0.0-beta.2/apollo.js"></script>
+    </body>
+</html>
