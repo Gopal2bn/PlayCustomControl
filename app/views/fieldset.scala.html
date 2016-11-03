@@ -1,6 +1,8 @@
 @(searchCriteriaForm: Form[views.formdata.ContractSearchCriteriaFormData],
 contractEntityList:   Map[String,String],
-contractCategoryList: Map[String,String])
+contractCategoryList: Map[String,String],
+categoriesList : Map[String,Boolean],
+contractStatusList : List[String])
 
 @import views.html.mmscustomhelper._
 
@@ -21,6 +23,12 @@ contractCategoryList: Map[String,String])
         label = "Version",
         placeholder = "",
         help = "")
+
+        <!-- Hobbies -->
+        @checkboxes(searchCriteriaForm("categories"),
+        label = "Categories",
+        checkboxMap = categoriesList,
+        help = "")
     </div>
 </fieldset>
 <fieldset class="form-group">
@@ -40,6 +48,12 @@ contractCategoryList: Map[String,String])
         optionMap = contractCategoryList,
         isMultiple = false,
         help = "")
+
+        @radiobuttons(searchCriteriaForm("contractStatus"),
+        label = "Contract Status",
+        contractStatusList = contractStatusList,
+        help = "")
+
     </div>
 </fieldset>
 <fieldset class="form-group">

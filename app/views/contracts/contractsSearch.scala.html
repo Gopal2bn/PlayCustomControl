@@ -1,4 +1,4 @@
-@(searchCriteriaForm: Form[views.formdata.ContractSearchCriteriaFormData],contractEntityList: Map[String,String],contractCategoryList: Map[String,String])(implicit messages: Messages)
+@(searchCriteriaForm: Form[views.formdata.ContractSearchCriteriaFormData],contractEntityList: Map[String,String],contractCategoryList: Map[String,String],categoriesList: Map[String,Boolean],contractStatusList:List[String])(implicit messages: Messages)
 @import helper._
 @main("Welcome to Play") {
 
@@ -9,7 +9,7 @@
     </div>
     <div class="accordion-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
         @form(routes.ContractsController.search1()) {
-            @fieldset(searchCriteriaForm, contractEntityList,contractCategoryList)
+            @fieldset(searchCriteriaForm, contractEntityList,contractCategoryList,categoriesList,contractStatusList)
         }
     </div>
 </div>
